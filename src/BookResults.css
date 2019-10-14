@@ -1,0 +1,9 @@
+.book-results {
+  list-style: none;
+  background-color: white;
+  margin-top: 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Book from './Book';
+import './BookResults.css';
 
 class BookResults extends Component {
 
@@ -15,7 +16,7 @@ class BookResults extends Component {
     console.log(this.props.books)
     this.props.books.map(item => console.log(item.id))
     return (
-      <ul>
+      <ul className="book-results">
         {this.props.books.map(item => <Book
               key={item.id}
               title={item.volumeInfo.title}
