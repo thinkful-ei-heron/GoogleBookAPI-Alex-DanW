@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Search from './Search';
+import Filter from './Filter';
+import BookResults from './BookResults';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      /*
+      title: "",
+      author: "",
+      price: "",
+      description: "",
+      thumbnail: "",
+      id: ""
+      */
+      books: [],
+      searchUrl: ''
+    };
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let result = document.querySelector('#search');
+    console.log('search term is ' + result.value);
+  }
+
+  handleFilterChange(val) {
+    console.log('Filter change was ' + val);
+  }
+
+  render() {
+    return (
+      <main className="App">
+        <header>
+          <h1>Google Book Search</h1>
+          <Search handleSubmit={this.handleSubmit} />
+          <Filter handleFilterChange={this.handleFilterChange} />
+        </header>
+      </main>
+    );
+  }
 }
 
 export default App;
