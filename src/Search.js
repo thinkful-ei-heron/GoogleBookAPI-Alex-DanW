@@ -5,7 +5,7 @@ function Search(props) {
     <form>
       <label htmlFor="search">Search:</label>
       <input type="text" name="search" id="search" placeholder="Enter Search Terms" required></input>
-      <button type="submit" htmlFor="search" onClick={e => props.handleSubmit(e)}>
+      <button className="submit" type="submit" htmlFor="search" onClick={e => props.handleSubmit(e)}>
         Submit
       </button>
     </form>
