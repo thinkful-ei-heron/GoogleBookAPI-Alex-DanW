@@ -9,9 +9,6 @@ class App extends Component {
     error: null
   };
 
-  constructor(props) {
-    super(props);
-  }
 
   getData = (url) => {
     fetch(url)

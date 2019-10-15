@@ -3,13 +3,13 @@ import React from 'react';
 function Filter(props) {
   return (
     <div>
-      <label for="print-type">Print Type</label>
+      <label htmlFor="print-type">Print Type</label>
       <select id="print-type">
         <option value="all">all</option>
         <option value="books">books</option>
         <option value="magazines">magazine</option>
       </select>
-      <label for="filter-type">Book Type</label>
+      <label htmlFor="filter-type">Book Type</label>
       <select id="filter-type">
         <option value="">all</option>
         <option value="ebooks">ebooks</option>
